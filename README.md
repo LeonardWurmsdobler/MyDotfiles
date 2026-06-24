@@ -3,6 +3,8 @@
 Personal dotfiles for an Arch Linux + Hyprland setup with animated wallpapers, an EWW control center, pywal color theming, and a custom Waybar.
 
 ---
+![Example](EXAMPLE.png)
+---
 
 ## Stack
 
