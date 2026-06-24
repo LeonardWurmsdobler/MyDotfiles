@@ -1,0 +1,187 @@
+@import '/home/leonard/.cache/wal/colors-waybar.css';
+
+@define-color accent @color5;
+@define-color surface alpha(@color2, 0.15);
+@define-color border alpha(@color3, 0.3);
+@define-color muted @color8;
+
+/* === Floating Notification Popups === */
+.floating-notifications.background {
+    background: transparent;
+}
+
+.floating-notifications .notification-row .notification-background {
+    background: alpha(@background, 0.88);
+    border: 1px solid @border;
+    border-radius: 12px;
+    margin: 4px 8px;
+}
+
+/* === Control Center Panel === */
+.blank-window {
+    background: alpha(black, 0.25);
+}
+
+.control-center {
+    background: alpha(@background, 0.88);
+    border: 1px solid @border;
+    border-radius: 16px;
+    padding: 12px;
+    margin: 8px;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.control-center-list-placeholder {
+    color: @muted;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+}
+
+/* === Widget: Title === */
+.widget-title {
+    color: @foreground;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 4px;
+}
+
+.widget-title > button {
+    color: @muted;
+    background: alpha(@color3, 0.2);
+    border: 1px solid @border;
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11px;
+    transition: 200ms ease;
+}
+
+.widget-title > button:hover {
+    background: alpha(@accent, 0.2);
+    border-color: alpha(@accent, 0.5);
+    color: @accent;
+}
+
+/* === Widget: DND === */
+.widget-dnd {
+    color: @foreground;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    padding: 4px;
+}
+
+.widget-dnd > switch {
+    background: @border;
+    border-radius: 99px;
+    border: none;
+}
+
+.widget-dnd > switch:checked {
+    background: @accent;
+}
+
+.widget-dnd > switch slider {
+    background: white;
+    border-radius: 99px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+/* === Notifications === */
+.notification-row {
+    outline: none;
+}
+
+.notification-background {
+    background: alpha(@color1, 0.25);
+    border: 1px solid @border;
+    border-radius: 12px;
+    margin: 3px 0;
+    padding: 2px;
+    transition: 200ms ease;
+}
+
+.notification-background:hover {
+    background: alpha(@color2, 0.3);
+    border-color: alpha(@accent, 0.4);
+}
+
+.notification {
+    padding: 10px;
+}
+
+.summary {
+    color: @foreground;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.time {
+    color: @muted;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 10px;
+}
+
+.body {
+    color: alpha(@foreground, 0.85);
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+}
+
+.image {
+    border-radius: 8px;
+    margin-right: 8px;
+}
+
+/* === Close Button === */
+.close-button {
+    background: alpha(@color1, 0.3);
+    border: 1px solid alpha(@border, 0.5);
+    border-radius: 99px;
+    color: @muted;
+    min-width: 20px;
+    min-height: 20px;
+    padding: 2px;
+    transition: 200ms ease;
+}
+
+.close-button:hover {
+    background: alpha(@color9, 0.35);
+    border-color: alpha(@color9, 0.6);
+    color: @foreground;
+}
+
+/* === Action Buttons === */
+.notification-action {
+    background: alpha(@color2, 0.2);
+    border: 1px solid @border;
+    border-radius: 8px;
+    color: @foreground;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11px;
+    margin: 4px 2px 2px;
+    padding: 4px 8px;
+    transition: 200ms ease;
+}
+
+.notification-action:hover {
+    background: alpha(@accent, 0.2);
+    border-color: alpha(@accent, 0.5);
+    color: @accent;
+}
+
+/* === Urgency Levels === */
+.critical .notification-background {
+    border-color: alpha(@color9, 0.6);
+    background: alpha(@color9, 0.1);
+}
+
+.low .notification-background {
+    border-color: alpha(@border, 0.5);
+    opacity: 0.85;
+}

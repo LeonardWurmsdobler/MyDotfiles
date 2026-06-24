@@ -1,0 +1,4 @@
+config-file = /home/leonard/.cache/wal/colors-ghostty
+
+background-opacity = 0.85
+background-blur-radius = 20

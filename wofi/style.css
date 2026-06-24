@@ -1,0 +1,42 @@
+@import '/home/leonard/.cache/wal/colors-waybar.css';
+
+@define-color accent @color5;
+@define-color border @color8;
+
+window {
+    background-color: alpha(@background, 0.7);
+    border: 2px solid alpha(@border, 0.6);
+    border-radius: 12px;
+}
+
+#input {
+    background-color: alpha(@accent, 0.1);
+    color: @foreground;
+    border: 1px solid alpha(@accent, 0.4);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 8px;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 14px;
+}
+
+#inner-box {
+    padding: 4px;
+}
+
+#outer-box {
+  border: none;
+}
+
+#entry {
+    border-radius: 6px;
+    padding: 6px 10px;
+    color: @foreground;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 13px;
+}
+
+#entry:selected {
+    background-color: alpha(@accent, 0.2);
+    color: @accent;
+}

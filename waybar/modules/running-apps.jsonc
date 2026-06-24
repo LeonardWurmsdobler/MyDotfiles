@@ -1,0 +1,12 @@
+{
+  "custom/apps-icon": {
+    "format": "󱂬",
+    "tooltip": false
+  },
+  "custom/running-apps": {
+    "exec": "python3 ~/.config/waybar/scripts/running-apps.py",
+    "return-type": "json",
+    "interval": 3,
+    "tooltip": true
+  }
+}

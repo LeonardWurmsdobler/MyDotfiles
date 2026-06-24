@@ -1,0 +1,25 @@
+# Core settings
+show=drun
+width=600
+height=500
+prompt=Apps...
+always_parse_args=true
+hide_search=false
+hide_scroll=true
+term=ghostty
+dynamic_lines=true
+
+# Appearance and interaction
+allow_images=false
+image_size=24
+insensitive=true
+normal_window=false
+click_to_close=true
+
+
+# Margins and layout
+layer=top
+gtk_dark=true
+orientation=vertical
+columns=1
+
