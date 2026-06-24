@@ -1,0 +1,237 @@
+# MyDotfiles — Arch Hyprland Rice
+
+Personal dotfiles for an Arch Linux + Hyprland setup with animated wallpapers, an EWW control center, pywal color theming, and a custom Waybar.
+
+---
+
+## Stack
+
+| Role | Tool |
+|---|---|
+| Window Manager | [Hyprland](https://hyprland.org) |
+| Terminal | [Ghostty](https://ghostty.org) |
+| Shell | [Fish](https://fishshell.com) + [Starship](https://starship.rs) prompt |
+| Editor | [Neovim](https://neovim.io) (LazyVim + pywal16 colorscheme) |
+| Bar | [Waybar](https://github.com/Alexays/Waybar) |
+| App Launcher | [Wofi](https://hg.sr.ht/~scoopta/wofi) |
+| Widgets / Control Center | [EWW](https://github.com/elkowar/eww) |
+| Notifications | [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) |
+| OSD | [SwayOSD](https://github.com/ErikReider/SwayOSD) |
+| Lock Screen | [Hyprlock](https://github.com/hyprwm/hyprlock) |
+| Idle Daemon | [Hypridle](https://github.com/hyprwm/hypridle) |
+| Wallpaper | [awww](https://github.com/heyvito/awww) (animated GIF support) |
+| Color Theming | [Pywal](https://github.com/dylanaraps/pywal) |
+| File Manager (TUI) | [Yazi](https://github.com/sxyazi/yazi) |
+| File Manager (GUI) | [Dolphin](https://apps.kde.org/dolphin) |
+| Browser | [Chromium](https://www.chromium.org) |
+| Clipboard | [Cliphist](https://github.com/sentriz/cliphist) + [Walker](https://github.com/abenz1267/walker) |
+| Screenshots | [Hyprshot](https://github.com/Gustash/Hyprshot) |
+| Color Picker | [Hyprpicker](https://github.com/hyprwm/hyprpicker) |
+| Emoji Picker | [Smile](https://github.com/mijorus/smile) |
+| System Monitor | [Btop](https://github.com/aristocratos/btop) |
+| System Info | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) |
+| Logout Menu | [Wlogout](https://github.com/ArtsyMacaw/wlogout) |
+| Media Control | [Playerctl](https://github.com/altdesktop/playerctl) |
+| Spotify Theming | [Spicetify](https://spicetify.app) + Hazy theme |
+| Qt Theming | [qt6ct](https://github.com/trialuser02/qt6ct) + [Kvantum](https://github.com/tsujan/Kvantum) |
+
+---
+
+## Dependencies
+
+### Core (pacman / AUR)
+
+```
+hyprland hyprlock hypridle hyprshot hyprpicker
+ghostty waybar wofi eww-tray-wayland
+swaync swayosd wlogout
+fish starship zoxide
+neovim yazi btop fastfetch
+chromium dolphin
+playerctl playerctl
+wl-clipboard cliphist
+awww python-pywal
+smile
+polkit-gnome
+power-profiles-daemon
+qt6ct kvantum
+```
+
+### AUR packages
+
+```
+ghostty           # terminal emulator
+awww              # animated wallpaper
+swayosd           # on-screen display for volume/brightness
+walker            # dmenu replacement (used for clipboard picker)
+hyprshot          # screenshot utility
+hyprpicker        # color picker
+smile             # emoji picker
+eww               # widgets
+spicetify-cli     # Spotify theming
+bibata-cursor-theme  # Bibata-Modern-Ice cursor
+```
+
+### Shell / CLI tools
+
+```
+eza      # ls replacement
+bat      # cat replacement
+zoxide   # smarter cd
+yay      # AUR helper
+```
+
+### Fonts
+
+- **JetBrainsMono Nerd Font** — used in hyprlock clock and terminal
+- Any **Nerd Font** for icons in Waybar, EWW, Wofi, etc.
+
+---
+
+## Keybinds
+
+`$mod` = **Super (Windows key)**
+
+### Apps
+
+| Keybind | Action |
+|---|---|
+| `Super + Enter` | Open terminal (Ghostty) |
+| `Super + Shift + Enter` | Open browser (Chromium) |
+| `Super + Shift + F` | Open file manager (Yazi in Ghostty) |
+| `Super + F2` | Open system monitor (btop in Ghostty) |
+| `Super + Ctrl + E` | Open emoji picker (Smile) |
+
+### Window Management
+
+| Keybind | Action |
+|---|---|
+| `Super + W` | Close active window |
+| `Super + F` | Toggle fullscreen |
+| `Super + T` | Toggle floating |
+| `Super + Shift + T` | Center floating window |
+| `Super + P` | Toggle pseudo-tiling (dwindle) |
+
+### Focus
+
+| Keybind | Action |
+|---|---|
+| `Super + H` | Focus left |
+| `Super + L` | Focus right |
+| `Super + K` | Focus up |
+| `Super + J` | Focus down |
+| `Alt + Tab` | Cycle to next window |
+
+### Move Windows
+
+| Keybind | Action |
+|---|---|
+| `Super + Shift + H` | Move window left |
+| `Super + Shift + L` | Move window right |
+| `Super + Shift + K` | Move window up |
+| `Super + Shift + J` | Move window down |
+| `Super + ←/→/↑/↓` | Move window or swap group in direction |
+
+### Resize
+
+| Keybind | Action |
+|---|---|
+| `Super + ,` | Shrink window horizontally |
+| `Super + .` | Grow window horizontally |
+| `Super + RMB (drag)` | Resize window |
+| `Super + LMB (drag)` | Move window |
+
+### Workspaces
+
+| Keybind | Action |
+|---|---|
+| `Super + 1–5` | Switch to workspace 1–5 |
+| `Super + Shift + 1–5` | Move window to workspace 1–5 |
+| `Super + 6` | Move window silently to workspace 1 |
+| `Super + 7` | Move window silently to workspace 2 |
+| `Super + 8` | Move window silently to workspace 3 |
+| `Super + Scroll Up/Down` | Switch workspaces |
+
+### Launchers & Utilities
+
+| Keybind | Action |
+|---|---|
+| `Super + Space` | App launcher (Wofi drun) |
+| `Super + /` | Web search via Wofi (opens Chromium) |
+| `Super + U` | Wallpaper picker (Wofi → awww + wal) |
+| `Super + X` | Power menu (Wofi) |
+| `Super + V` | Clipboard history (cliphist + Walker) |
+| `Super + C` | Toggle EWW control center |
+| `Super + Escape` | Lock screen (Hyprlock) |
+| `Super + Shift + C` | Color picker → clipboard (Hyprpicker) |
+
+### Screenshots
+
+| Keybind | Action |
+|---|---|
+| `Print` | Screenshot entire output → `~/Pictures/Screenshots` |
+| `Super + Print` | Screenshot active window → `~/Pictures/Screenshots` |
+| `Ctrl + Home` | Screenshot region → `~/Pictures/Screenshots` |
+
+### Media / Volume
+
+| Keybind | Action |
+|---|---|
+| `XF86AudioRaiseVolume` | Volume up (SwayOSD) |
+| `XF86AudioLowerVolume` | Volume down (SwayOSD) |
+| `XF86AudioPlay` | Toggle mute (SwayOSD) |
+
+---
+
+## Shell Aliases & Abbreviations (Fish)
+
+### Aliases
+
+| Alias | Command |
+|---|---|
+| `ls` | `eza --icons --group-directories-first` |
+| `ll` | `eza --icons -l --git --group-directories-first` |
+| `la` | `eza --icons -la --git --group-directories-first` |
+| `lt` | `eza --icons --tree --level=2` |
+| `cat` | `bat --style=plain` |
+| `v` | `nvim` |
+| `g` | `git` |
+| `yy` | `yay` |
+| `..` | `cd ..` |
+| `...` | `cd ../..` |
+| `reload-waybar` | Kill and restart Waybar |
+| `reload-eww` | Kill and restart EWW daemon + control center |
+| `reload-wal` | Re-apply last pywal theme (`wal -R`) |
+
+### Abbreviations (expand as you type)
+
+| Abbr | Expands to |
+|---|---|
+| `gs` | `git status` |
+| `ga` | `git add` |
+| `gc` | `git commit -m` |
+| `gp` | `git push` |
+| `gl` | `git log --oneline --graph --decorate` |
+| `gd` | `git diff` |
+
+---
+
+## Idle / Lock Behavior
+
+| Timeout | Action |
+|---|---|
+| 10 min | Play video wallpaper (mpvpaper) |
+| 15 min | Turn off displays |
+| 60 min | Suspend |
+
+Lock is triggered before sleep and can be manually invoked with `Super + Escape`.
+
+---
+
+## Notes
+
+- **Keyboard layout** is set to `gb` in `hypr/hyprland.conf`. Change `kb_layout` if needed.
+- **Pywal** generates color schemes from the active wallpaper. Ghostty, Neovim (pywal16.nvim), and the EWW control center all read from `~/.cache/wal/`.
+- The **wallpaper picker** (`Super + U`) uses `awww` for applying wallpapers and `wal` to regenerate the color scheme, then reloads Waybar, EWW, and SwayNC.
+- **Spicetify** applies the Hazy theme to Spotify. Run `spicetify apply` after installation.
+- The EWW control center launches quick-access pills for YouTube, Lunar Client, Steam, and a DND toggle.
