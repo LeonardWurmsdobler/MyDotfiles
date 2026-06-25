@@ -129,6 +129,19 @@ yay -S awww eww-wayland anyrun-git swayosd-git \
   spicetify-cli vesktop-bin lact
 ```
 
+**Clone and link:**
+```bash
+git clone git@github.com:LeonardWurmsdobler/MyDotfiles.git ~/MyDotfiles
+cd ~/MyDotfiles
+
+# Link configs (adjust paths as needed, or copy if you want)
+ln -sf ~/MyDotfiles/hypr ~/.config/hypr
+ln -sf ~/MyDotfiles/waybar ~/.config/waybar
+ln -sf ~/MyDotfiles/ghostty ~/.config/ghostty
+ln -sf ~/MyDotfiles/fish ~/.config/fish
+ln -sf ~/MyDotfiles/wofi ~/.config/wofi
+ln -sf ~/MyDotfiles/eww ~/.config/eww
+ln -sf ~/MyDotfiles/yazi ~/.config/yazi
 
 
 ## Keybinds
