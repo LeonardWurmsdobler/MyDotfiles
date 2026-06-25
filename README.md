@@ -308,4 +308,11 @@ Lock is triggered before sleep and can be manually invoked with `Super + Escape`
 ---
 
 *Built on Arch Linux. Started from scratch configured and riced in one session. (so may not be the best)*
-Massive thanks to Muhammad Haikal Hakim for the waybar config, so many other cool configs -> [Here](https://github.com/haikal-hakim/athena/tree/main/.config/waybar) As well as xxx for the control center (FIND)
+
+## Credits
+
+Massive thanks to Muhammad Haikal Hakim for the waybar config, so many other cool configs -> [Here](https://github.com/haikal-hakim/athena/tree/main/.config/waybar) 
+As well as garrati-0 EWW Control Center based on [garrati-0/dotfilEs](https://github.com/garrati-0/dotfilEs) (GPL v3)
+- Modified to integrate pywal dynamic theming
+- Translated and restructured CSS
+- Added custom scripts
